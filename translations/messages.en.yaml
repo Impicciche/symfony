@@ -51,3 +51,5 @@ REGISTRATION:
     TITLE:      'Numeripic - activation needed'
     INFO:       'Your account was created, please check your email account to activate ♥'
 
+HOME:
+  ITEM_COUNT: 'Total pictures count : '

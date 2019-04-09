@@ -25,4 +25,10 @@
             </div>
         </div>
     {% endfor %}
+    <div class="count my-4">
+        {{ 'HOME.ITEM_COUNT'|trans }}{{ pictures.getTotalItemCount }}
+    </div>
+    <div class="navigation">
+        {{ knp_pagination_render(pictures) }}
+    </div>
 {% endblock %}
