@@ -1,0 +1,28 @@
+
+{% extends 'base.html.twig' %}
+
+{% block stylesheets %}
+
+{% endblock %}
+
+{% block javascripts %}
+
+{% endblock %}
+
+{% block body %}
+    <p>The color of the day is : {{ color| default("red") }}</p>
+
+    {% for picture in pictures %}
+        <div class="card" style="width: 18rem;">
+            <img src="{{ path('get_picture_content', {"picture" : picture.getId()}) }}" class="card-img-top" alt="{{  picture.getTitle() }}">
+            <div class="card-body">
+                <h5 class="card-title">{{ picture.getTitle() }}</h5>
+                <p class="card-text">{{ picture.getDescription() }}</p>
+                <p class="card-text"><small class="text-muted">{{ picture.getSharer().getUsername() }}</small></p>
+                {% for tag in picture.getTags() %}
+                    <span class="badge badge-primary">{{ tag.getLabel() }}</span>
+                {% endfor %}
+            </div>
+        </div>
+    {% endfor %}
+{% endblock %}

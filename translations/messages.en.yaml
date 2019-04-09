@@ -1,0 +1,53 @@
+NAV:
+  HOME: 'Home'
+  TERMS: 'Terms'
+  LOGIN: 'Login'
+  REGISTER: 'Register'
+  LOGOUT: 'Logout'
+  LOGGED_AS: 'Logged as %name%'
+  ADDPICTURE: 'Add Pictures'
+LOGIN:
+  INFO: 'Please sign in'
+  USERNAME: 'Username'
+  PASSWORD: 'Password'
+  SUBMIT: 'Sign in'
+
+
+FORM:
+  USERNAME:
+    LABEL: 'Username:'
+  PASSWORD:
+    LABEL1: 'Password:'
+    LABEL2: 'Repeat password:'
+  EMAIL:
+    LABEL: 'Email:'
+  TOS:
+    LABEL: 'Accept terms of service:'
+  SUBMIT:
+    LABEL: 'Register'
+  PICTURE:
+    TITLE:
+      LABEL:  'Title'
+    DESCRIPTION:
+      LABEL:  'Description'
+    TAGS:
+      LABEL:  'Tags'
+    FILE:
+      LABEL: 'File'
+    SUBMIT:
+      LABEL:  'Submit'
+
+MAIL:
+  REGISTER:
+    TITLE: 'Activate your account'
+    INFO: 'Hi %name% your yccount was successfully created on Numeripic, just one more step to activate!!'
+    HTML:
+      LINK:
+        INFO: 'Please click'
+        LABEL: 'on this link'
+
+REGISTRATION:
+  ACTIVATION:
+    TITLE:      'Numeripic - activation needed'
+    INFO:       'Your account was created, please check your email account to activate ♥'
+

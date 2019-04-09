@@ -1,0 +1,23 @@
+<ul class="nav justify-content-start">
+    <li class="nav-item">
+        <a class="nav-link {% if app.request.attributes.get('_route') == "homepage" %}disabled{% endif %}" href="{{ path('homepage') }}">{{ 'NAV.HOME' | trans }}</a>
+    </li>
+    {% if is_granted('IS_AUTHENTICATED_FULLY') %}
+        <li class="nav-item">
+            <a class="nav-link {% if app.request.attributes.get('_route') == "app_login" %}disabled{% endif %}" href="{{ path('app_login') }}">{{ 'NAV.LOGGED_AS' | trans({'%name%' : app.user.getUsername()}) }}</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link {% if app.request.attributes.get('_route') == "app_logout" %}disabled{% endif %}" href="{{ path('app_logout') }}">{{ 'NAV.LOGOUT' | trans }}</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link {% if app.request.attributes.get('_route') == "add_picture" %}disabled{% endif %}" href="{{ path('add_picture') }}">{{ 'NAV.ADDPICTURE' | trans }}</a>
+        </li>
+    {% else %}
+        <li class="nav-item">
+            <a class="nav-link {% if app.request.attributes.get('_route') == "app_login" %}disabled{% endif %}" href="{{ path('app_login') }}">{{ 'NAV.LOGIN' | trans }}</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link {% if app.request.attributes.get('_route') == "register" %}disabled{% endif %}" href="{{ path('register') }}">{{ 'NAV.REGISTER' | trans }}</a>
+        </li>
+    {% endif %}
+</ul>
